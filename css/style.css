@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E0D8CD;
+    /*background: #9CA0A7;*/
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estructura de la web */
+.content {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1.2fr 2fr 2fr 2fr 2fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+}
+    
+.header { 
+    /* así escollim en quina fila i columna acaba i li posem flex, justify-content y align-items per a que el text estiga centrat en el div  */
+    grid-area: 1 / 1 / 2 / 9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #293742;
+    /*background-color: #662424;*/
+}
+
+.mainleft { 
+    grid-area: 2 / 1 / 6 / 3; 
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    color: white;
+}
+
+.boton-index{
+    width: auto;
+    height: 80px;
+    /*background-color: #8A8B8F;*/
+    background-color: #80A3C8;
+    border-bottom: 1px solid #78797c;
+    display: flex;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(64,62,61);
+}
+
+.maincenter { 
+    grid-area: 2 / 3 / 6 / 7; 
+    padding: 50px;
+    color: rgb(95,90,82);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1;
+}
+
+.mainright { 
+    grid-area: 2 / 7 / 6 / 9; 
+    padding: 30px;
+    /* background-color: #8A8B8F;*/
+    background-color: #80A3C8;
+    color: rgb(64,62,61);
+}
+
+.footer { 
+    grid-area: 6 / 1 / 7 / 9; 
+    /*background-color: #777B83;*/
+    background-color: #47423A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(216,198,178);
+}
+
+
+h1{
+    color: rgb(166, 160, 156);
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+    a:visited{
+        color: black;
+        text-decoration: none;
+    }
+
+    .maincenter h2{
+        font-size: 60px;
+    }
+
+    .maincenter p{
+        font-size: 20px;
+    }
+
+    .maincenter ul{
+        padding: 20px 0;
+    }
+
+    .maincenter li{
+        font-size: 20px;
+    }
+
+    .logo{
+        width: 100%;
+        object-fit: contain;
+        margin: auto;
+    }
+
+    p{
+        margin: 30px 0;
+        font-size: 21px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .mainright img{
+        /* Aquests son els estils la imagen del div de la dreta, li he posat el float per a que se inserte al costat del text sense que es trenque res i després
+        puga continuar */
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        float: right;
+        flex-wrap: wrap;
+        padding: 30px 10px 10px 10px;
+    }
+
+    .image-farm img{
+        width: 220px;
+        margin: 20px;
+    }
+
+    
