@@ -20,9 +20,8 @@ body{
     grid-row-gap: 0px;
     height: 100vh;
 }
-    
+/* Els estils de el grid */    
 .header { 
-    /* así escollim en quina fila i columna acaba i li posem flex, justify-content y align-items per a que el text estiga centrat en el div  */
     grid-area: 1 / 1 / 2 / 9; 
     display: flex;
     justify-content: center;
@@ -79,12 +78,10 @@ body{
     color: rgb(216,198,178);
 }
 
-
+/* Estils extra */
 h1{
     color: rgb(166, 160, 156);
 }
-
-
 
 a{
     text-decoration: none;
@@ -122,10 +119,8 @@ a{
         font-size: 21px;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
-
+/* Elstils de les imatges */
     .mainright img{
-        /* Aquests son els estils la imagen del div de la dreta, li he posat el float per a que se inserte al costat del text sense que es trenque res i després
-        puga continuar */
         width: 50%;
         justify-content: center;
         align-items: center;
@@ -134,9 +129,136 @@ a{
         padding: 30px 10px 10px 10px;
     }
 
-    .image-farm img{
+    .image-inditex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .image-inditex img{
         width: 220px;
         margin: 20px;
     }
-
+/* Estils del formulari */
+    #ex10 {
+        max-width: 900px;
+        width: 90%;
+        margin: auto;
+        padding-top: 30px;
+    }
     
+    .fieldset-ex10 {
+        padding: 10px;
+    }
+    
+    .boton-enviar-ex10 {
+        display: block;
+        width: 100%;
+        max-width: 300px; 
+        margin: 10px auto;
+        padding: 10px 20px;
+        border-radius: 8px;
+        background-color: #293742;
+        font-size: 18px;
+        color: rgb(166, 160, 156);
+        border: none;
+        text-align: center;
+    }
+    
+    .input-ex10 {
+        width: 100%; 
+        max-width: 870px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #293742;
+        border-bottom: 3px solid #bbb;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 15px;
+        color: rgb(166, 160, 156);
+    }
+    /* Estils per a fer la página responsive adaptant el grid, alguns paddings y width */
+    @media screen and (max-width: 600px) {
+        #ex10 {
+            width: 95%;
+            padding-top: 20px;
+        }
+    
+        .input-ex10 {
+            font-size: 14px;
+            height: 35px;
+        }
+    
+        .boton-enviar-ex10 {
+            font-size: 16px;
+            padding: 8px 15px;
+        }
+    }
+    
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 100px auto auto auto auto 100px;
+    }
+        
+    .header { 
+        grid-area: 1 / 1 / 2 / 9; 
+    }
+    
+    .mainleft { 
+        grid-area: 2 / 1 / 4 / 3; 
+    }
+
+    .maincenter { 
+        grid-area: 2 / 3 / 4 / 9; 
+    }
+    
+    .mainright { 
+        grid-area: 4 / 1 / 6 / 9; 
+        height: auto;
+    }
+    
+    .footer { 
+        grid-area: 6 / 1 / 7 / 9; 
+    }
+
+}
+@media screen and (max-width: 599px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1.2fr auto auto auto auto 1fr;
+    }
+        
+    .header { 
+        grid-area: 1 / 1 / 2 / 9; 
+    }
+    
+    .mainleft { 
+        grid-area: 2 / 1 / 3 / 9; 
+        height: auto;
+    }
+
+    .maincenter { 
+        grid-area: 3 / 1 / 4 / 9 !important; 
+        height: auto; 
+        padding: 50px 5px;
+    }
+    
+    .mainright { 
+        grid-area: 4 / 1 / 6 / 9; 
+        height: auto;
+    }
+    
+    .footer { 
+        grid-area: 6 / 1 / 7 / 9; 
+    }
+
+    h2{
+        font-size: 40px !important;
+    }
+
+}
+
